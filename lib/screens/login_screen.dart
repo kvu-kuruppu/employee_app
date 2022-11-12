@@ -163,10 +163,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
                                     EasyLoading.showSuccess('Login Success');
 
-                                    Navigator.of(context)
-                                        .pushReplacement(MaterialPageRoute(
-                                      builder: (context) => const HomeScreen(),
-                                    ));
+                                    Navigator.of(context).pushAndRemoveUntil(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const HomeScreen(),
+                                        ),
+                                        (route) => false);
                                   } else {
                                     EasyLoading.showError('Wrong credentials');
                                   }

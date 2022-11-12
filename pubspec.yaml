@@ -38,6 +38,7 @@ dependencies:
   http:
   flutter_easyloading:
   shared_preferences:
+  marquee:
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:employee_app/screens/emp_details_screen.dart';
 import 'package:employee_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -82,10 +83,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                   preferences.remove('email');
 
-                                  Navigator.of(context)
-                                      .pushReplacement(MaterialPageRoute(
-                                    builder: (context) => const LoginScreen(),
-                                  ));
+                                  Navigator.of(context).pushAndRemoveUntil(
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LoginScreen(),
+                                      ),
+                                      (route) => false);
                                 },
                                 child: const Text('OK'),
                               )
@@ -120,7 +123,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(20.0),
                   child: InkWell(
                     onTap: () {
-                      print(_empList[index]['company_logo']);
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                            EmpDetails(id: _empList[index]['id']),
+                      ));
                     },
                     child: Card(
                       color: Colors.amber[200],
