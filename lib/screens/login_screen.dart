@@ -2,6 +2,7 @@ import 'package:employee_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -156,13 +157,16 @@ class _LoginScreenState extends State<LoginScreen> {
 
                                   if (response.body.contains(_email.text) &&
                                       response.body.contains(_password.text)) {
-                                    EasyLoading.showSuccess('Login Success')
-                                        .then((value) => Navigator.of(context)
-                                                .pushReplacement(
-                                                    MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const HomeScreen(),
-                                            )));
+                                    SharedPreferences preferences =
+                                        await SharedPreferences.getInstance();
+                                    preferences.setString('email', _email.text);
+
+                                    EasyLoading.showSuccess('Login Success');
+
+                                    Navigator.of(context)
+                                        .pushReplacement(MaterialPageRoute(
+                                      builder: (context) => const HomeScreen(),
+                                    ));
                                   } else {
                                     EasyLoading.showError('Wrong credentials');
                                   }
