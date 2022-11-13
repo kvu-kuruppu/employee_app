@@ -1,16 +1,24 @@
 # employee_app
 
-A new Flutter project.
+> Used packages:
+- http
+- flutter_easyloading
+- shared_preferences
+- marquee
+- webview_flutter
+- cached_network_image
+- flutter_launcher_icons
 
-## Getting Started
+> App Screenshots
 
-This project is a starting point for a Flutter application.
+###### First Screen
+![Screenshot_2022-11-14-00-03-05-254_com example employee_app](https://user-images.githubusercontent.com/107350617/201538733-acdbe533-d8c6-4235-a29e-bd784bac13ca.jpg)
 
-A few resources to get you started if this is your first Flutter project:
+###### Home Screen after successful login
+![Screenshot_2022-11-14-00-04-10-863_com example employee_app](https://user-images.githubusercontent.com/107350617/201538755-85c5f350-1bda-4ee8-82a5-50ef294b0f7a.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+###### Click any employee
+![Screenshot_2022-11-14-00-04-20-458_com example employee_app](https://user-images.githubusercontent.com/107350617/201538763-d93e9373-7d51-43b4-a94c-1ffe7e87ffb0.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###### Clicked view more
+![Screenshot_2022-11-14-00-04-31-978_com example employee_app](https://user-images.githubusercontent.com/107350617/201538767-a79d7f15-35ac-412a-a4d5-f45063599ec4.jpg)
