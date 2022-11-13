@@ -40,7 +40,8 @@ dependencies:
   shared_preferences:
   marquee:
   webview_flutter:
-  cached_network_image: 
+  cached_network_image:
+  flutter_launcher_icons:
 
 dev_dependencies:
   flutter_test:
